@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetBooks">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBooksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBooksResult" type="tns:ArrayOfBooks" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBooks">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Books" nillable="true" type="tns:Books" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Books">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Publisher" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="author" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="publisher" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertBookResult" type="tns:ArrayOfBooks" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteBookResult" type="tns:ArrayOfBooks" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="author" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="publisher" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateBookResult" type="tns:ArrayOfBooks" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBooksSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBooks" />
+  </wsdl:message>
+  <wsdl:message name="GetBooksSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertBookSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBook" />
+  </wsdl:message>
+  <wsdl:message name="InsertBookSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBookSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBook" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBookSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBookSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBook" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBookSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBookResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BooksWebServiceSoap">
+    <wsdl:operation name="GetBooks">
+      <wsdl:input message="tns:GetBooksSoapIn" />
+      <wsdl:output message="tns:GetBooksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBook">
+      <wsdl:input message="tns:InsertBookSoapIn" />
+      <wsdl:output message="tns:InsertBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <wsdl:input message="tns:DeleteBookSoapIn" />
+      <wsdl:output message="tns:DeleteBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <wsdl:input message="tns:UpdateBookSoapIn" />
+      <wsdl:output message="tns:UpdateBookSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BooksWebServiceSoap" type="tns:BooksWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBooks">
+      <soap:operation soapAction="http://tempuri.org/GetBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBook">
+      <soap:operation soapAction="http://tempuri.org/InsertBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <soap:operation soapAction="http://tempuri.org/DeleteBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <soap:operation soapAction="http://tempuri.org/UpdateBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BooksWebServiceSoap12" type="tns:BooksWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBooks">
+      <soap12:operation soapAction="http://tempuri.org/GetBooks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBook">
+      <soap12:operation soapAction="http://tempuri.org/InsertBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <soap12:operation soapAction="http://tempuri.org/DeleteBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBook">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BooksWebService">
+    <wsdl:port name="BooksWebServiceSoap" binding="tns:BooksWebServiceSoap">
+      <soap:address location="https://localhost:44347/BooksWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BooksWebServiceSoap12" binding="tns:BooksWebServiceSoap12">
+      <soap12:address location="https://localhost:44347/BooksWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

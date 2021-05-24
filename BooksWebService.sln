@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksWS", "BooksWS\BooksWS.csproj", "{F2A1ADEB-B3F1-4F55-8CBE-8599D1C94570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksWebService-client", "BooksWebService-client\BooksWebService-client.csproj", "{57816183-433D-4A39-8C70-58F344CD16BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2A1ADEB-B3F1-4F55-8CBE-8599D1C94570} = {F2A1ADEB-B3F1-4F55-8CBE-8599D1C94570}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2A1ADEB-B3F1-4F55-8CBE-8599D1C94570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A1ADEB-B3F1-4F55-8CBE-8599D1C94570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A1ADEB-B3F1-4F55-8CBE-8599D1C94570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A1ADEB-B3F1-4F55-8CBE-8599D1C94570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57816183-433D-4A39-8C70-58F344CD16BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57816183-433D-4A39-8C70-58F344CD16BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57816183-433D-4A39-8C70-58F344CD16BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57816183-433D-4A39-8C70-58F344CD16BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF8F9A69-3406-440E-88A2-A43A6E944B19}
+	EndGlobalSection
+EndGlobal

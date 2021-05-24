@@ -1,0 +1,14 @@
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\bin\Debug\BooksWebService-client.exe.config
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\bin\Debug\BooksWebService-client.exe
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\bin\Debug\BooksWebService-client.pdb
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\bin\Debug\BooksWS.dll
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\bin\Debug\BooksWS.pdb
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\bin\Debug\BooksWS.dll.config
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService-client.csprojAssemblyReference.cache
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService_client.Form1.resources
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService_client.Properties.Resources.resources
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService-client.csproj.GenerateResource.cache
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService-client.csproj.CoreCompileInputs.cache
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService-client.csproj.CopyComplete
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService-client.exe
+D:\iuh\SA\WebService-SOAP\OnThiTH\BooksWebService\BooksWebService-client\obj\Debug\BooksWebService-client.pdb
